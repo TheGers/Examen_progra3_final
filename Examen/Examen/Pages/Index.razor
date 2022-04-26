@@ -1,0 +1,25 @@
+﻿@page "/"
+
+<AuthorizeView Roles="Administrador">
+    <Authorized Context="AuthenticationState">
+        <h1>Bienvenido Administrador</h1>
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView Roles="Usuario">
+    <Authorized Context="AuthenticationState">
+        <h1>Bienvenido Usuario</h1>
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView>
+    <NotAuthorized>
+        <h2>Debe identificarse para poder Iniciar la Aplicacion Web</h2>
+    </NotAuthorized> 
+</AuthorizeView>
+
+
+
+
+<h5>Usuarios usados para el Ingreso </h5>
+<h6>Usuario NCASO, Pass 12345</h6>
